@@ -6,6 +6,9 @@ PHANTOMJS=phantomjs-1.9.7-linux-x86_64
 
 # Japanese for PhantomJS capture
 yum -y groupinstall "Japanese Support"
+localedef -f UTF-8 -i ja_JP ja_JP.utf8
+localedef -f SHIFT_JIS -i ja_JP ja_JP.sjis
+localedef -f EUC-JP -i ja_JP ja_JP.eucjp
 
 # instll basic software
 yum install -y initscripts zip unzip vim tree
